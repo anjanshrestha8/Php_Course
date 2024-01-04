@@ -7,7 +7,7 @@ $isOld = null;
 
 #Syntax 
 
-$name = "Anjan Shrestha";
+$name = "PHP Programming";
 $language = array("c programming","Java");
 
 echo $name;
