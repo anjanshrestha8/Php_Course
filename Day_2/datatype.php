@@ -11,3 +11,4 @@ $name = "Anjan Shrestha";
 $language = array("c programming","Java");
 
 echo $name;
+echo $language;
