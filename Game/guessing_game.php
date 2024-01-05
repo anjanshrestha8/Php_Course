@@ -3,7 +3,12 @@
     echo"The number you choose is : ".$player_number;
     
     echo"<br>";
-    $_SESSION['computer_number']=(rand(0,10));
+
+    session_start();
+    if(!isset($_SESSION['computer_number'])){
+        $_SESSION['computer_number']=(rand(0,10));
+    }
+    
     $computer_number = $_SESSION['computer_number'];
     echo "The number computer choose is : ".$computer_number;
     
@@ -15,6 +20,7 @@
         {
             echo"<br>";
             echo "YOU WON !!!!";
+            session_destroy();
         }
         else {
             echo"<br>";
