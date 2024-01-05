@@ -3,7 +3,8 @@
     echo"The number you choose is : ".$player_number;
     
     echo"<br>";
-    $computer_number=(rand(0,10));
+    $_SESSION['computer_number']=(rand(0,10));
+    $computer_number = $_SESSION['computer_number'];
     echo "The number computer choose is : ".$computer_number;
     
 
