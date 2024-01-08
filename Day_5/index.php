@@ -1,7 +1,6 @@
-#(working with different files and connecting these files in one single files)
+<!-- working with different files and connecting these files in one single files -->
 
 <?php
-
 
 #include
 #require

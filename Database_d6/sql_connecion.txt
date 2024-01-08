@@ -1,0 +1,16 @@
+
+
+
+# connect with database (procedure)
+mysqli_connect();
+mysqli_query();
+mysqli_error();
+mysqli_fetch_assoc();
+
+
+
+
+# connect with data (oop approach)
+$ conn = new mysqli();
+$result= $conn->query();
+$result-> fetch_assoc();
