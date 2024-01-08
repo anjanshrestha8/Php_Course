@@ -22,10 +22,11 @@
             echo "YOU WON !!!!";
             session_destroy();
         }
-        else {
-            echo"<br>";
-            echo"Try Again !!!";
-            
+        if($p>$c){
+            echo"Its too high";
+        }
+        if($p<$c){
+            echo"Its too low";
         }
 
     }
