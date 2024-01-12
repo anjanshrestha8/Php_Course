@@ -1,9 +1,11 @@
 <?php
     require_once"./config.php";
+    $id=4;
+    $age=25;
 
-    $data= $_POST['value'];
-    echo"this is tha value".$data;
-
-
+    $values= $_POST['data'];
+    $query = "INSERT INTO todo_tb(ID,NAME,AGE) values($id,'$values',$age)";
+    $sql=mysqli_query($conn,$query);
+    
 
 ?>

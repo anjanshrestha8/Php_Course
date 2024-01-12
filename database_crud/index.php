@@ -1,47 +1,43 @@
+<!-- CURD Operation -->
 <?php
 
+    require_once"config.php";
 
-include'function.php';
-
-// connection establish
-
-echo"<h1>Connecting Database</h1>";
-$connection = mysqli_connect("localhost","root","anjanshrestha8","todo");
-print_this($connection);
-
-// selecting data
-
-echo"<h1>Selecting Database</h1>";
-$result = mysqli_query($connection,"SELECT * FROM todo_tb");
-print_this($result);
-
-
-// fetching before insertion
-echo"<h1>Fetching Database before insertion</h1>";
-$rows = mysqli_fetch_all($result);
-print_this($rows);
-
-
-
-// inserting
-
-echo"<h1>Inserting Database</h1>";
-$insert = mysqli_query($connection,"INSERT INTO todo_tb(ID,NAME,AGE) values(2,'Shrestha',22)");
-
-print_this($insert);
-
-
-// delete after insertion
-echo"<h1>Deleting Database</h1>";
-$delete = mysqli_query($connection,"DELETE FROM todo_tb where ID =2");
-print_this($delete);
-
-
-
-
-
-
-
-
+    $read="SELECT * FROM todo_tb";
+    $result=mysqli_query($conn,$read);
+    $fetch = mysqli_fetch_all($result,MYSQLI_ASSOC);
+   
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD</title>
+</head>
+<body>
+    <section>
+        <h1>CURD Operation!!!!!!</h1>
+    </section>
+
+    <section>
+        <form action="create.php" method="post">
+            <input type="text" name="quote" require autocomplete="quote">
+            <button type="submit">Save</button>
+        </form>
+    </section>
+
+    <section>
+     <ul>
+        <?php foreach($fetch as $values['Name']):
+                echo "values".$values['Name'];    
+                endforeach
+      ?>
+     </ul>
+    </section>
+    
+</body>
+</html>

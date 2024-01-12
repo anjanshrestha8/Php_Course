@@ -3,6 +3,10 @@
 <?php
 
 require_once "./config.php";
+$sql = "SELECT * FROM todo_tb";
+$result=mysqli_query($conn,$sql);
+$fetch = mysqli_fetch_all($result);
+
 
 
 ?>
@@ -19,15 +23,25 @@ require_once "./config.php";
         <h1>CURD OPERATION USING PHP</h1>
     </section>
     <!-- DATA INPUT KO LAGE -->
-    <section
-    <form action="/create.php" method="post">
-        <input type="text" name="value" autocomplete="value">
+    <section>
+    <form      method="post"  action="create.php">
+        <input type="text" name="data" autocomplete="data">
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">Save</button>
     </form>
     </section>
 
     <!-- DATA OUTPUT KO LAGE -->
+    <section>
+
+    <ul>
+        <?php
+            foreach($fetch as $values['NAME']):
+            echo $values['NAME'];
+            endforeach;
+        ?>
+    </ul>
+    </section>
     
     
 </body>
