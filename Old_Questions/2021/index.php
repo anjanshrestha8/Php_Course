@@ -20,8 +20,8 @@ require_once "./config.php";
     </section>
     <!-- DATA INPUT KO LAGE -->
     <section
-    <form action="" method="post">
-        <input type="text" name="value">
+    <form action="/create.php" method="post">
+        <input type="text" name="value" autocomplete="value">
         <br>
         <button type="submit">Submit</button>
     </form>
