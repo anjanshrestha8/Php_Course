@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu xs:schemaLocation="menu.xsd">
+    <price>
+        <usd>38</usd>
+    </price>
+    <name>Momo</name>
+    <dec>mitho mitho mitho</dec>
+
+</menu>

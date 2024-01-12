@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- internal ddt -->
+<!DOCTYPE user[
+    <!ELEMENT user (name,age,location)>
+    <!ELEMENT name (#PCDATA)>  <!--PARSH CHARACTER DATA -->
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT location (#PCDATA)>
+]>
+<user>
+    <name>Anjan</name>
+    <age>80</age>
+    <location>kathmandu</location>
+</user>

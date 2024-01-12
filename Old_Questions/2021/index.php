@@ -36,13 +36,13 @@ $fetch = mysqli_fetch_all($result);
 
     <ul>
         <?php
-            foreach($fetch as $values['NAME']):
+            foreach($fetch as $values):
             echo $values['NAME'];
-            endforeach;
+            
         ?>
     </ul>
     </section>
+
     
-    
-</body>
-</html>
+    </body>
+            </html>
