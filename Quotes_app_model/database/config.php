@@ -3,7 +3,7 @@
 $username = 'root';
 $password = 'anjanshrestha8';
 $hostname = "localhost";
-$database_name = "todo";
+$database_name = "quote";
 
 $conn = mysqli_connect($hostname, $username, $password, $database_name);
 if (!$conn) {

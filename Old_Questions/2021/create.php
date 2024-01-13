@@ -6,6 +6,13 @@
     $values= $_POST['data'];
     $query = "INSERT INTO todo_tb(ID,NAME,AGE) values($id,'$values',$age)";
     $sql=mysqli_query($conn,$query);
+
+    if(!$sql){
+        die('smoething went wrong');
+    }
+    else{
+        header("Location:./");
+    }
     
 
 ?>

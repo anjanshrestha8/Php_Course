@@ -2,9 +2,9 @@
 
 require_once "./config.php";
 
-$sql = "select * from todo_tb";
+$sql = "select * from quotes";
 $result = mysqli_query($conn, $sql);
-$rows = mysqli_fetch_all($result);
+$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
 
@@ -34,13 +34,13 @@ $rows = mysqli_fetch_all($result);
     <ul>
       <?php
       foreach ($rows as $value) {
-        echo "<li>" . $value['NAME']  ."</li>";
+        echo "<li>" . $value['title']  ."</li>";
       }
       ?>
 
       <?php foreach ($rows as $value) : ?>
       <!-- <li>
-          <span><?= $value['NAME'] ?></span>
+          <span><?= $value['title'] ?></span>
           <form action="/" method="get">
             <button type="submit">delete</button>
           </form>

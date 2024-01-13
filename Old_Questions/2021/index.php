@@ -5,7 +5,7 @@
 require_once "./config.php";
 $sql = "SELECT * FROM todo_tb";
 $result=mysqli_query($conn,$sql);
-$fetch = mysqli_fetch_all($result);
+$fetch = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 
 
@@ -26,7 +26,7 @@ $fetch = mysqli_fetch_all($result);
     <section>
     <form      method="post"  action="create.php">
         <input type="text" name="data" autocomplete="data">
-        <br>
+        <br><br><br>
         <button type="submit">Save</button>
     </form>
     </section>
@@ -37,12 +37,34 @@ $fetch = mysqli_fetch_all($result);
     <ul>
         <?php
             foreach($fetch as $values):
-            echo $values['NAME'];
-            
+        ?>
+        <li>
+            <span><?php
+                echo $values['ID']."--->";
+                echo $values['NAME'];
+                
+
+            ?></span>
+
+// update
+            <form action="" method="POST">
+                <input type="hidden" name="id" value="<?php echo $values['ID']?>">
+                <button type="submit"> Submit</button>
+                
+            </form>
+//delete
+            <form action="delete.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $values['ID']?>">
+                <button type="submit" name="delete" >Delete</button>
+            </form>
+        </li>
+
+        <?php
+            endforeach
         ?>
     </ul>
     </section>
 
     
     </body>
-            </html>
+</html>
