@@ -1,16 +1,18 @@
 <?php
-
     $hostname="localhost";
     $username="root";
     $password="anjanshrestha8";
-    $database="todo";
+    $dbname="CRUD";
 
-    
-    $conn =mysqli_connect($hostname,$username,$password,$database);
+    $conn=mysqli_connect($hostname,$username,$password,$dbname);
     if(!$conn){
         die(mysqli_connect_error());
     }
-    echo"CONNECTION VAYO LA";
-    echo"<br>"
+    else{
+        echo"connected";
+
+    }
+
+
 
 ?>

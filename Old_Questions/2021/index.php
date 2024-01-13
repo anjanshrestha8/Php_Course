@@ -46,13 +46,13 @@ $fetch = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
             ?></span>
 
-// update
-            <form action="" method="POST">
+ <!-- update -->
+            <form action="update.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $values['ID']?>">
                 <button type="submit"> Submit</button>
                 
             </form>
-//delete
+<!-- delete -->
             <form action="delete.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $values['ID']?>">
                 <button type="submit" name="delete" >Delete</button>
