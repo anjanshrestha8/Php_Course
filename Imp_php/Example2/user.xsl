@@ -6,6 +6,13 @@
         <html>
             <body>
                 <h1>User</h1>
+                <p>
+                    <xsl:value-of select="firstname" /> 
+                </p>
+                <p>
+                    <xsl:value-of select="lastname" />
+                </p>
+
             </body>
         </html>
         
