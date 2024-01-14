@@ -1,5 +1,5 @@
 xsl------> extensible stylesheet language.
 
-i) XSLT
+i) XSLT ------> extensible stylesheet language transformation
 ii) XPATH
 iii) XSL-FO
