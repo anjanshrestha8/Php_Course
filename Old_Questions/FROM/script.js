@@ -19,7 +19,7 @@ function validation(){
     }
     else{
         alert("Input valid email");
-        // document.getElementById("user").value= " ";
+        document.getElementById("user").value= " ";
         return false;
     }
     
