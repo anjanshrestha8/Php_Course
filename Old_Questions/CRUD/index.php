@@ -31,7 +31,19 @@
         <?php foreach($fetch as $value):?>
             <li><?php
                     echo $value['title'];
+                    
                 ?>
+<!-- delete -->
+                <form action="delete.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $value['id'];?>">
+                    <button type="submit">DELETE</button>
+                </form>
+<!-- update -->
+                <form action="" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $value['id'];?>">
+                    <button type="submit">UPDATE</button>
+                </form>
+
             </li>
         <?php endforeach?>
        
