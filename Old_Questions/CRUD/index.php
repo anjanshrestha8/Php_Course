@@ -1,6 +1,9 @@
 <?php
     require_once"config.php";
-    
+    $query = "SELECT * FROM php";
+    $query_run=mysqli_query($conn,$query);
+    $fetch=mysqli_fetch_all($query_run,MYSQLI_ASSOC);
+
 ?>
 
 
@@ -18,18 +21,20 @@
 
     <!-- insert -->
     <section>
-        <form action="" method="POST">
+        <form action="create.php" method="POST">
             <input type="text" name="data">
             <button type="submit">CREATE</button>
         </form>
     </section>
     <!-- OUTPUT -->
     <section>
-        <li>anjan</li>
-        <li>anjan</li>
-        <li>anjan</li>
-        <li>anjan</li>
-        <li>anjan</li>
+        <?php foreach($fetch as $value):?>
+            <li><?php
+                    echo $value['title'];
+                ?>
+            </li>
+        <?php endforeach?>
+       
     </section>    
 </body>
 </html>
