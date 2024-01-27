@@ -1,0 +1,4 @@
+<!ELEMENT weather (location, temp, wind) >
+<!ELEMENT location (#PCDATA) >
+<!ELEMENT temp (#PCDATA) >
+<!ELEMENT wind (#PCDATA)>

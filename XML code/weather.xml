@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weather SYSTEM "weather.dtd">
+
+<weather>
+  <location>kathmandu</location>
+  <temp>sdfsdf</temp>
+  <wind>DHERAI HAWA AIE RAXA</wind>
+</weather>
