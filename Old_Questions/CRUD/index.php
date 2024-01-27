@@ -39,9 +39,11 @@
                     <button type="submit">DELETE</button>
                 </form>
 <!-- update -->
-                <form action="" method="POST">
+                <form action="update.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $value['id'];?>">
+                    
                     <button type="submit">UPDATE</button>
+                     
                 </form>
 
             </li>

@@ -12,7 +12,7 @@ function validation(){
     }
     // validation of email
     let email = document.getElementById("mail");
-    let regExp =/^([a-z A-Z 0-9 \._-]+)@([a-z 0-9]+.)([a-z]+.)([a-z]?)$/;
+    let regExp =/^([a-z A-Z 0-9 \._-]+)@([a-z 0-9]+.)([a-z]+).([a-z]?)$/;
     if(regExp.test(email)){
         alert("valid email");
         return true;

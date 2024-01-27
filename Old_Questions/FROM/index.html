@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,4 +17,43 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script>
+		function Formvalidate(){
+		const number = document.getElementById(number);
+		const email = document.getElementById(email);
+
+
+		const RegExp = "/^[0-9]{10}$/";
+		const RegExp1 = "/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-z]$/";
+
+			if (RegExp.test(number)){
+			alert("Enter all 10 digits");
+		}
+
+			else if(RegExp1.test(email)){
+			alert("Email not verified one");
+		}
+        else{
+            alert("submitted");
+        }
+		}
+
+	</script>
+	</head>
+	<body>
+		<form onsubmit="Formvalidate()">
+			<label>Name</label>
+			<input type="text" id="name">
+			<label>Number</label>
+			<input type="text" id="number">
+			<label>Email</label>
+			<input type="email" id="email"> 
+			<input type="submit" id="submit">
+		</form>
+	</body>
+	</html>
